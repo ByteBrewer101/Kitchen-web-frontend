@@ -9,7 +9,7 @@ import waiters from "../assets/waiters.png";
 
 export function ServiceSection(){
     return (
-      <div className="h-[559px] flex flex-col items-center mt-[119px] space-y-10 ">
+      <div className="h-fit flex flex-col items-center mt-[119px] space-y-10 ">
         <h1 className="text-orange-500 text-[18px] font-bold">WHAT WE SERVE</h1>
         <h1 className="text-gray-800 font-extrabold text-5xl text-center w-[532px]">
           Your Favorite Food Delivery Partner
