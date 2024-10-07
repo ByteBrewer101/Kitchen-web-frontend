@@ -19,7 +19,7 @@ export function ReviewSection(){
           </p>
           <div className="flex items-start space-x-2 shadow-xl w-fit p-2 pr-10 rounded-xl">
             <div className="bg-orange-500 text-white rounded-full h-10 flex justify-center items-center w-10">
-              U
+              T
             </div>
             <div>
               <h1 className="text-gray-800 font-semibold">Theresa Jordan</h1>

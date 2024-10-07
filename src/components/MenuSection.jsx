@@ -1,64 +1,61 @@
 import { FoodCard } from "./FoodCard";
-import paneer from "../assets/paneer.png"
+import paneer from "../assets/paneer.png";
 
 const cardData = [
   {
     image: paneer,
     name: "Butter Paneer",
-    price: " 10",
+    price: "10",
   },
   {
     image: paneer,
     name: "Paneer Tikka",
-    price: " 11",
+    price: "11",
   },
   {
     image: paneer,
     name: "Shahi Paneer",
-    price: " 14",
+    price: "14",
   },
   {
     image: paneer,
     name: "Palak Paneer",
-    price: " 13",
+    price: "13",
   },
   {
     image: paneer,
     name: "Paneer Bhurji",
-    price: " 9",
+    price: "9",
   },
 ];
 
-
-
-
-
-
-
 export function MenuSection() {
   return (
-    <div className="h-fit flex flex-col space-y-10">
+    <div className="h-fit flex flex-col space-y-8 p-4 md:p-8">
       <h1 className="text-orange-500 text-[18px] font-semibold">OUR MENU</h1>
-      <h1 className=" w-1/2 text-gray-800 text-6xl font-bold">
+      <h1 className="text-gray-800 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold md:w-3/4 lg:w-1/2">
         Menu That Always Makes You Fall In Love
       </h1>
-      <div className="flex justify-between">
-        <div className="space-x-20">
-          <button className="bg-orange-500 min-w-[141px]  text-white text-[18px] font-semibold p-4 rounded-full px-6 ">
+
+      {/* Buttons Section */}
+      <div className="flex flex-col md:flex-row md:justify-between items-center space-y-4 md:space-y-0">
+        <div className="flex flex-wrap justify-center md:space-x-4">
+          <button className="bg-orange-500 min-w-[100px] md:min-w-[141px] text-white text-[16px] md:text-[18px] font-semibold p-3 md:p-4 rounded-full">
             All
           </button>
-          <button className="border border-1 min-w-[141px]  text-gray-800 text-[18px] font-semibold p-4 rounded-full px-6 ">
+          <button className="border min-w-[100px] md:min-w-[141px] text-gray-800 text-[16px] md:text-[18px] font-semibold p-3 md:p-4 rounded-full">
             Sides
           </button>
-          <button className="border border-1 min-w-[141px] text-gray-800 text-[18px] font-semibold p-4 rounded-full px-6 ">
+          <button className="border min-w-[100px] md:min-w-[141px] text-gray-800 text-[16px] md:text-[18px] font-semibold p-3 md:p-4 rounded-full">
             Veg Options
           </button>
-          <button className="border border-1 min-w-[141px] text-gray-800 text-[18px] font-semibold p-4 rounded-full px-6 ">
+          <button className="border min-w-[100px] md:min-w-[141px] text-gray-800 text-[16px] md:text-[18px] font-semibold p-3 md:p-4 rounded-full">
             Non Veg Options
           </button>
         </div>
 
-        <div className="border border-2 w-1/3 rounded-full flex justify-between items-center px-2">
+        {/* Search Section */}
+        <div className="border w-full md:w-1/2 lg:w-1/3 rounded-full flex items-center px-2 mt-4 md:mt-0">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +63,7 @@ export function MenuSection() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-6"
+              className="w-6 h-6"
             >
               <path
                 strokeLinecap="round"
@@ -75,17 +72,12 @@ export function MenuSection() {
               />
             </svg>
           </div>
-          <div className="w-full px-2">
-            <input
-              type="text"
-              className="w-full focus:outline-none"
-              placeholder="Search food"
-              name=""
-              id=""
-            />
-          </div>
+          <input
+            type="text"
+            className="w-full focus:outline-none px-2"
+            placeholder="Search food"
+          />
           <div className="bg-orange-300 p-2 rounded-full flex items-center justify-center">
-            {" "}
             <button>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +85,7 @@ export function MenuSection() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="size-6 stroke-white"
+                className="w-6 h-6 stroke-white"
               >
                 <path
                   strokeLinecap="round"
@@ -106,12 +98,16 @@ export function MenuSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-5 gap-6">
-        {cardData.map((i, k) => {
-          return (
-            <FoodCard key={k} image={i.image} name={i.name} price={i.price} />
-          );
-        })}
+      {/* Food Cards Section */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+        {cardData.map((item, index) => (
+          <FoodCard
+            key={index}
+            image={item.image}
+            name={item.name}
+            price={item.price}
+          />
+        ))}
       </div>
     </div>
   );

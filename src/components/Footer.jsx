@@ -1,46 +1,14 @@
-
-import map from "../assets/Rectangle.png"
-
-export function ContactUsForm() {
-  return (
-    <div className="bg-orange-100 flex flex-col p-10 rounded-xl">
-      <div className="flex items-center justify-center">
-        <h1 className="text-orange-500 text-xl font-semibold">CONTACT US</h1>
-      </div>
-
-      <div className="flex justify-between">
-        <div className="flex flex-col space-y-4 w-1/2">
-          <h1 className="font-bold text-xl">Leave Us A Message</h1>
-          <input
-            type="text"
-            className="w-full placeholder-gray-500 p-4 rounded-xl border border-black bg-transparent focus:outline-none"
-            placeholder="Name"
-          />
-          <input
-            type="text"
-            className="w-full placeholder-gray-500 p-4 rounded-xl border border-black bg-transparent focus:outline-none"
-            placeholder="Email Address"
-          />
-          <textarea
-            rows={10}
-            className="w-full placeholder-gray-500 p-4 rounded-xl border border-black bg-transparent focus:outline-none"
-            placeholder="Your Message"
-          ></textarea>
-          <button className="text-white font-bold p-4 w-full bg-orange-500 rounded-full">
-            Send
-          </button>
-        </div>
-
-        <div className="flex flex-col justify-center items-start space-y-4 w-1/2 px-8">
-          <h1 className="text-xl font-semibold">
-            Mausis Delicacies B1234 Maple Street, Suite 201 Downtown District,
-            Near Stanley Park Vancouver, BC V6G 1Z4 Canada
-          </h1>
-          <h1 className="text-lg font-semibold">+91 236 258 8250</h1>
-          <h1 className="text-lg font-semibold">
-            contact@mausisdelicacies.com
-          </h1>
-          <div> <div className="flex space-x-4">
+export function Footer(){
+   return (
+     <footer className="bg-white text-black py-8 h-[400px]">
+       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+         <div>
+           <h2 className="text-xl font-bold mb-4">Mausis Delicacies</h2>
+           <p className="text-sm mb-4">
+             Our job is to fill your tummy with delicious food and fast, free
+             delivery.
+           </p>
+           <div className="flex space-x-4">
              <a href="#" className="hover:text-gray-600">
                <svg
                  xmlns="http://www.w3.org/2000/svg"
@@ -51,11 +19,11 @@ export function ContactUsForm() {
                >
                  <path
                    d="M20.947 8.80496C20.9369 8.04758 20.7951 7.29773 20.528 6.58896C20.2964 5.99111 19.9425 5.44816 19.4892 4.99479C19.0358 4.54142 18.4929 4.18761 17.895 3.95596C17.1953 3.69331 16.4562 3.5513 15.709 3.53596C14.747 3.49296 14.442 3.48096 12 3.48096C9.55801 3.48096 9.24501 3.48096 8.29001 3.53596C7.54317 3.55141 6.80436 3.69343 6.10501 3.95596C5.50707 4.18745 4.96403 4.5412 4.51064 4.99459C4.05725 5.44798 3.7035 5.99102 3.47201 6.58896C3.20884 7.28809 3.06713 8.02707 3.05301 8.77396C3.01001 9.73696 2.99701 10.042 2.99701 12.484C2.99701 14.926 2.99701 15.238 3.05301 16.194C3.06801 16.942 3.20901 17.68 3.47201 18.381C3.70389 18.9787 4.05791 19.5215 4.51145 19.9747C4.96499 20.4279 5.50807 20.7815 6.10601 21.013C6.80344 21.2862 7.54238 21.4383 8.29101 21.463C9.25401 21.506 9.55901 21.519 12.001 21.519C14.443 21.519 14.756 21.519 15.711 21.463C16.4582 21.4482 17.1974 21.3066 17.897 21.044C18.4947 20.812 19.0375 20.4581 19.4909 20.0048C19.9442 19.5515 20.2981 19.0086 20.53 18.411C20.793 17.711 20.934 16.973 20.949 16.224C20.992 15.262 21.005 14.957 21.005 12.514C21.003 10.072 21.003 9.76196 20.947 8.80496ZM11.994 17.102C9.44001 17.102 7.37101 15.033 7.37101 12.479C7.37101 9.92496 9.44001 7.85596 11.994 7.85596C13.2201 7.85596 14.396 8.34302 15.263 9.21C16.1299 10.077 16.617 11.2529 16.617 12.479C16.617 13.7051 16.1299 14.8809 15.263 15.7479C14.396 16.6149 13.2201 17.102 11.994 17.102ZM16.801 8.76296C16.6594 8.76309 16.5192 8.7353 16.3883 8.68117C16.2575 8.62704 16.1386 8.54764 16.0385 8.44751C15.9383 8.34738 15.8589 8.22849 15.8048 8.09765C15.7507 7.9668 15.7229 7.82656 15.723 7.68496C15.723 7.54346 15.7509 7.40334 15.805 7.27262C15.8592 7.14189 15.9385 7.0231 16.0386 6.92305C16.1387 6.82299 16.2574 6.74363 16.3882 6.68948C16.5189 6.63533 16.659 6.60746 16.8005 6.60746C16.942 6.60746 17.0821 6.63533 17.2129 6.68948C17.3436 6.74363 17.4624 6.82299 17.5624 6.92305C17.6625 7.0231 17.7418 7.14189 17.796 7.27262C17.8501 7.40334 17.878 7.54346 17.878 7.68496C17.878 8.28096 17.396 8.76296 16.801 8.76296Z"
-                   fill="black"
+                   fill="#F68220"
                  />
                  <path
                    d="M11.994 15.4821C13.6525 15.4821 14.997 14.1376 14.997 12.4791C14.997 10.8206 13.6525 9.47607 11.994 9.47607C10.3355 9.47607 8.99103 10.8206 8.99103 12.4791C8.99103 14.1376 10.3355 15.4821 11.994 15.4821Z"
-                   fill="black"
+                   fill="#F68220"
                  />
                </svg>
              </a>
@@ -69,7 +37,7 @@ export function ContactUsForm() {
                >
                  <path
                    d="M13.397 21.4969V13.3009H16.162L16.573 10.0919H13.397V8.04792C13.397 7.12192 13.655 6.48793 14.984 6.48793H16.668V3.62693C15.8486 3.53912 15.025 3.49672 14.201 3.49993C11.757 3.49993 10.079 4.99193 10.079 7.73093V10.0859H7.332V13.2949H10.085V21.4969H13.397Z"
-                   fill="black"
+                   fill="#F68220"
                  />
                </svg>
              </a>
@@ -83,17 +51,84 @@ export function ContactUsForm() {
                >
                  <path
                    d="M23.643 5.43708C22.808 5.80708 21.911 6.05708 20.968 6.17008C21.941 5.58787 22.669 4.67154 23.016 3.59208C22.1019 4.13507 21.1014 4.51727 20.058 4.72208C19.3564 3.97294 18.4271 3.4764 17.4143 3.30955C16.4016 3.1427 15.3621 3.31487 14.4572 3.79933C13.5524 4.28379 12.8328 5.05344 12.4102 5.98878C11.9875 6.92412 11.8855 7.97283 12.12 8.97208C10.2677 8.87907 8.45564 8.39763 6.80144 7.55898C5.14723 6.72034 3.68785 5.54324 2.51801 4.10408C2.11801 4.79408 1.88801 5.59408 1.88801 6.44608C1.88757 7.21307 2.07644 7.96832 2.43789 8.64481C2.79934 9.3213 3.32217 9.89812 3.96001 10.3241C3.22029 10.3005 2.49688 10.1007 1.85001 9.74108V9.80108C1.84994 10.8768 2.22204 11.9195 2.90319 12.7521C3.58434 13.5847 4.53258 14.156 5.58701 14.3691C4.9008 14.5548 4.18135 14.5821 3.48301 14.4491C3.78051 15.3747 4.36001 16.1841 5.14038 16.764C5.92075 17.3439 6.86293 17.6653 7.83501 17.6831C6.18484 18.9785 4.1469 19.6812 2.04901 19.6781C1.67739 19.6782 1.30609 19.6565 0.937012 19.6131C3.06649 20.9823 5.54535 21.7089 8.07701 21.7061C16.647 21.7061 21.332 14.6081 21.332 8.45208C21.332 8.25208 21.327 8.05008 21.318 7.85008C22.2293 7.19105 23.0159 6.37497 23.641 5.44008L23.643 5.43708Z"
-                   fill="black"
+                   fill="#F68220"
                  />
                </svg>
              </a>
            </div>
          </div>
-          <div>
-            <img src={map} alt="Location map" className="w-full h-auto" />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+         <div>
+           <h2 className="text-xl font-bold mb-4">Company</h2>
+           <ul>
+             <li className="mb-2">
+               <a href="#" className="hover:text-gray-600">
+                 Why Mausis Delicacies?
+               </a>
+             </li>
+             <li className="mb-2">
+               <a href="#" className="hover:text-gray-600">
+                 Menu
+               </a>
+             </li>
+             <li className="mb-2">
+               <a href="#" className="hover:text-gray-600">
+                 Reviews
+               </a>
+             </li>
+           </ul>
+         </div>
+         <div>
+           <h2 className="text-xl font-bold mb-4">Support</h2>
+           <ul>
+             <li className="mb-2">
+               <a href="#" className="hover:text-gray-600">
+                 Privacy Policy
+               </a>
+             </li>
+             <li className="mb-2">
+               <a href="#" className="hover:text-gray-600">
+                 Terms and Conditions
+               </a>
+             </li>
+             <li className="mb-2">
+               <a href="#" className="hover:text-gray-600">
+                 Refund Policy
+               </a>
+             </li>
+           </ul>
+         </div>
+         <div>
+           <h2 className="text-xl font-bold mb-4">Get in Touch</h2>
+           <p className="text-sm mb-4">
+             Question or feedback? We&apos;d love to hear from you.
+           </p>
+           <div className="flex border border-2 rounded-full w-fit">
+             <input
+               type="email"
+               placeholder="Email Address"
+               className="p-2 rounded-full text-black focus:outline-none"
+             />
+             <button className="p-2  rounded-full  ">
+               <svg
+                 xmlns="http://www.w3.org/2000/svg"
+                 width="16"
+                 height="17"
+                 viewBox="0 0 16 17"
+                 fill="none"
+               >
+                 <path
+                   d="M15.1564 7.94369L1.40636 1.06869C1.29859 1.0148 1.17754 0.993202 1.05778 1.00651C0.938028 1.01981 0.82467 1.06746 0.731361 1.14369C0.642251 1.21838 0.57574 1.31643 0.539304 1.42685C0.502869 1.53726 0.497953 1.65564 0.525111 1.76869L2.37511 8.49994L0.500111 15.2124C0.474627 15.3069 0.471653 15.4059 0.491426 15.5017C0.511199 15.5975 0.553169 15.6873 0.61396 15.7639C0.674751 15.8405 0.752668 15.9017 0.841444 15.9427C0.930221 15.9837 1.02738 16.0033 1.12511 15.9999C1.22295 15.9994 1.31928 15.9758 1.40636 15.9312L15.1564 9.05619C15.2587 9.00375 15.3447 8.92406 15.4046 8.82592C15.4646 8.72777 15.4964 8.61497 15.4964 8.49994C15.4964 8.38491 15.4646 8.27212 15.4046 8.17397C15.3447 8.07583 15.2587 7.99614 15.1564 7.94369ZM2.09386 14.1937L3.47511 9.12494H9.25011V7.87494H3.47511L2.09386 2.80619L13.4751 8.49994L2.09386 14.1937Z"
+                   fill="#F68220"
+                   stroke="#F68220"
+                   strokeWidth="0.5"
+                 />
+               </svg>
+             </button>
+           </div>
+         </div>
+       </div>
+     </footer>
+   );
+};
+
+
