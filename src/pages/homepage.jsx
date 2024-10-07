@@ -1,5 +1,7 @@
+import { ContactUsForm } from "../components/ContactusForm";
 import { Herosection } from "../components/HeroSection";
 import { MenuSection } from "../components/MenuSection";
+import { ReviewSection } from "../components/ReviewSection";
 import { ServiceSection } from "../components/ServiceSection";
 import { TopBar } from "../components/TopBar";
 
@@ -11,6 +13,8 @@ export function Homepage(){
           <Herosection />
           <ServiceSection/>
           <MenuSection/>
+          <ReviewSection/>
+          <ContactUsForm/>
         </div>
       </div>
     );
