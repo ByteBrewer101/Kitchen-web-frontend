@@ -2,6 +2,7 @@ import { CartContents } from "../components/CartContents";
 import { ContactUsForm } from "../components/ContactusForm";
 import { Footer } from "../components/Footer";
 import { MenuHeader } from "../components/MenuHeader";
+
 import { TopBar } from "../components/TopBar";
 
 export function CartPage() {
@@ -69,6 +70,7 @@ export function CartPage() {
         <ContactUsForm />
       </div>
       <Footer />
+  
     </div>
   );
 }
