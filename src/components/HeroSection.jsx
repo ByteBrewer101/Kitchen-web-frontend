@@ -1,27 +1,26 @@
-import image from "../assets/Heroimage.png"
-
+import image from "../assets/Heroimage.png";
 
 export function Herosection() {
   return (
-    <div className="flex justify-between h-fit ">
-      <div className="w-1/2 flex flex-col justify-between pt-40">
-        <h1 className="px-6 p-4 text-[15px] w-fit rounded-full text-orange-500 bg-opacity-20 bg-orange-500">
+    <div className="flex flex-col-reverse  md:flex-row justify-between h-fit">
+      <div className="w-full md:w-1/2 flex flex-col space-y-10 p-4 justify-between pt-8 md:pt-40">
+        <h1 className="px-6 p-4 text-[12px] md:text-[15px] w-fit rounded-full text-orange-500 bg-opacity-20 bg-orange-500">
           More Than Faster
         </h1>
-        <h1 className="text-8xl font-extrabold text-left text-gray-800">
+        <h1 className="text-4xl md:text-8xl font-extrabold text-left text-gray-800">
           Be The Fastest In Delivering Your{" "}
           <span className="text-orange-500">Food</span>
         </h1>
-        <h1 className="text-gray-600 text-left font-semibold text-[18px] w-[470px]">
+        <h1 className="text-gray-600 text-left font-semibold text-[14px] md:text-[18px] w-full md:w-[470px]">
           Our job is to filling your tummy with delicious food and with fast and
           free delivery
         </h1>
-        <div className="flex space-x-20">
-          <button className="bg-orange-500 p-[20px] rounded-full text-white font-semibold">
+        <div className="flex space-x-4 md:space-x-20">
+          <button className="bg-orange-500 p-4 md:p-[20px] rounded-full text-white font-semibold">
             Get Started
           </button>
           <div className="flex items-center space-x-2">
-            <button className="p-[20px] rounded-full bg-orange-50  ">
+            <button className="p-4 md:p-[20px] rounded-full bg-orange-50">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -39,8 +38,8 @@ export function Herosection() {
           </div>
         </div>
       </div>
-      <div className=" h-full">
-        <img src={image} alt="" />
+      <div className="w-full md:w-1/2 h-full">
+        <img src={image} alt="Hero" className="w-full h-auto" />
       </div>
     </div>
   );

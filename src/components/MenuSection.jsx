@@ -31,25 +31,27 @@ const cardData = [
 
 export function MenuSection() {
   return (
-    <div className="h-fit flex flex-col space-y-8 p-4 md:p-8">
-      <h1 className="text-orange-500 text-[18px] font-semibold">OUR MENU</h1>
-      <h1 className="text-gray-800 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold md:w-3/4 lg:w-1/2">
+    <div className="h-fit flex flex-col space-y-6 p-4 md:p-6 lg:p-8">
+      <h1 className="text-orange-500 text-[16px] md:text-[18px] font-semibold text-center md:text-left">
+        OUR MENU
+      </h1>
+      <h1 className="text-gray-800 text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center md:text-left md:w-3/4 lg:w-1/2">
         Menu That Always Makes You Fall In Love
       </h1>
 
       {/* Buttons Section */}
       <div className="flex flex-col md:flex-row md:justify-between items-center space-y-4 md:space-y-0">
-        <div className="flex flex-wrap justify-center md:space-x-4">
-          <button className="bg-orange-500 min-w-[100px] md:min-w-[141px] text-white text-[16px] md:text-[18px] font-semibold p-3 md:p-4 rounded-full">
+        <div className="flex  justify-center space-x-2 md:space-x-4">
+          <button className="bg-orange-500 min-w-[90px] md:min-w-[130px] text-white text-[14px] md:text-[16px] font-semibold p-2 md:p-3 rounded-full">
             All
           </button>
-          <button className="border min-w-[100px] md:min-w-[141px] text-gray-800 text-[16px] md:text-[18px] font-semibold p-3 md:p-4 rounded-full">
+          <button className="border min-w-[90px] md:min-w-[130px] text-gray-800 text-[14px] md:text-[16px] font-semibold p-2 md:p-3 rounded-full">
             Sides
           </button>
-          <button className="border min-w-[100px] md:min-w-[141px] text-gray-800 text-[16px] md:text-[18px] font-semibold p-3 md:p-4 rounded-full">
+          <button className="border min-w-[90px] md:min-w-[130px] text-gray-800 text-[14px] md:text-[16px] font-semibold p-2 md:p-3 rounded-full">
             Veg Options
           </button>
-          <button className="border min-w-[100px] md:min-w-[141px] text-gray-800 text-[16px] md:text-[18px] font-semibold p-3 md:p-4 rounded-full">
+          <button className="border min-w-[90px] md:min-w-[130px] text-gray-800 text-[14px] md:text-[16px] font-semibold p-2 md:p-3 rounded-full">
             Non Veg Options
           </button>
         </div>
@@ -63,7 +65,7 @@ export function MenuSection() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-5 h-5 md:w-6 md:h-6"
             >
               <path
                 strokeLinecap="round"
@@ -74,7 +76,7 @@ export function MenuSection() {
           </div>
           <input
             type="text"
-            className="w-full focus:outline-none px-2"
+            className="w-full focus:outline-none px-2 text-[14px] md:text-[16px]"
             placeholder="Search food"
           />
           <div className="bg-orange-300 p-2 rounded-full flex items-center justify-center">
@@ -85,7 +87,7 @@ export function MenuSection() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-6 h-6 stroke-white"
+                className="w-5 h-5 md:w-6 md:h-6 stroke-white"
               >
                 <path
                   strokeLinecap="round"
@@ -99,7 +101,7 @@ export function MenuSection() {
       </div>
 
       {/* Food Cards Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
         {cardData.map((item, index) => (
           <FoodCard
             key={index}

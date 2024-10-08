@@ -3,13 +3,13 @@ import map from "../assets/Rectangle.png"
 
 export function ContactUsForm() {
   return (
-    <div className="bg-orange-100 flex flex-col p-10 rounded-xl">
+    <div className="bg-orange-100 flex flex-col p-4 md:p-10 rounded-xl">
       <div className="flex items-center justify-center">
         <h1 className="text-orange-500 text-xl font-semibold">CONTACT US</h1>
       </div>
 
-      <div className="flex justify-between">
-        <div className="flex flex-col space-y-4 w-1/2">
+      <div className="flex flex-col space-y-2 md:space-y-0 md:flex-row items-center justify-between">
+        <div className="flex flex-col space-y-4 w-full md:w-1/2">
           <h1 className="font-bold text-xl">Leave Us A Message</h1>
           <input
             type="text"
@@ -31,7 +31,7 @@ export function ContactUsForm() {
           </button>
         </div>
 
-        <div className="flex flex-col justify-center items-start space-y-4 w-1/2 px-8">
+        <div className="flex flex-col justify-center items-start space-y-4 w-full md:w-1/2 px-8">
           <h1 className="text-xl font-semibold">
             Mausis Delicacies B1234 Maple Street, Suite 201 Downtown District,
             Near Stanley Park Vancouver, BC V6G 1Z4 Canada
