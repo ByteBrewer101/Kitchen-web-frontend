@@ -1,4 +1,37 @@
+import { useNavigate } from "react-router-dom";
+
+
+
+
+
+
+
+
+
 export function TopBar() {
+
+  const navigate = useNavigate()
+
+    const handleHomeClick = () => {
+      navigate("/");
+    };
+
+   
+
+    const handleMenuClick = () => {
+      navigate("/menu");
+    };
+
+    const handleContactClick = () => {
+      navigate("/contactus");
+    };
+
+    const handleCartClick = ()=>{
+      navigate("/cart")
+    }
+
+
+
   return (
     <div className="flex justify-between px-[142px] py-[30px]">
       <div>
@@ -7,10 +40,10 @@ export function TopBar() {
         </h1>
       </div>
       <div className="flex justify-between w-1/3 text-[16px] font-[500] text-gray-500 ">
-        <button className="active:text-orange-500">Home</button>
-        <button>Services</button>
-        <button>Menu</button>
-        <button>Contact</button>
+        <button onClick={handleHomeClick}>Home</button>
+        <button onClick={handleContactClick} > About Us</button>
+        <button onClick={handleMenuClick} >Menu</button>
+        <button onClick={handleContactClick} >Contact</button>
       </div>
       <div className="flex justify-between space-x-10">
         <button>
@@ -29,7 +62,7 @@ export function TopBar() {
             />
           </svg>
         </button>
-        <button>
+        <button onClick={handleCartClick}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
