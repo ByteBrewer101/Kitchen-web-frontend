@@ -10,7 +10,7 @@ export function Homepage(){
     return (
       <div className="min-h-screen">
         <TopBar />
-        <div className="lg:mx-40 flex flex-col space-y-20 mb-20">
+        <div className="lg:mx-40 flex flex-col justify-center items-center space-y-20 mb-20">
           <Herosection />
           <ServiceSection/>
           <MenuSection/>

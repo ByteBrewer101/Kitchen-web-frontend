@@ -2,12 +2,12 @@ import image from "../assets/Heroimage.png";
 
 export function Herosection() {
   return (
-    <div className="flex flex-col-reverse  md:flex-row justify-between h-fit">
+    <div className="flex flex-col-reverse justify-center items-center  lg:flex-row lg:justify-between h-fit">
       <div className="w-full md:w-1/2 flex flex-col space-y-10 p-4 justify-between pt-8 md:pt-40">
         <h1 className="px-6 p-4 text-[12px] md:text-[15px] w-fit rounded-full text-orange-500 bg-opacity-20 bg-orange-500">
           More Than Faster
         </h1>
-        <h1 className="text-4xl md:text-8xl font-extrabold text-left text-gray-800">
+        <h1 className="text-4xl xl:text-7xl font-extrabold text-left text-gray-800">
           Be The Fastest In Delivering Your{" "}
           <span className="text-orange-500">Food</span>
         </h1>

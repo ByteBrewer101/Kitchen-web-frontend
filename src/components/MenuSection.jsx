@@ -22,16 +22,12 @@ const cardData = [
     name: "Palak Paneer",
     price: "13",
   },
-  {
-    image: paneer,
-    name: "Paneer Bhurji",
-    price: "9",
-  },
+ 
 ];
 
 export function MenuSection() {
   return (
-    <div className="h-fit flex flex-col space-y-6 p-4 md:p-6 lg:p-8">
+    <div className="h-fit w-fit flex flex-col space-y-6 p-4 md:p-6 lg:p-8">
       <h1 className="text-orange-500 text-[16px] md:text-[18px] font-semibold text-center md:text-left">
         OUR MENU
       </h1>
@@ -39,25 +35,24 @@ export function MenuSection() {
         Menu That Always Makes You Fall In Love
       </h1>
 
-      {/* Buttons Section */}
-      <div className="flex flex-col md:flex-row md:justify-between items-center space-y-4 md:space-y-0">
-        <div className="flex  justify-center space-x-2 md:space-x-4">
-          <button className="bg-orange-500 min-w-[90px] md:min-w-[130px] text-white text-[14px] md:text-[16px] font-semibold p-2 md:p-3 rounded-full">
+      <div className="flex flex-col xl:flex-row xl:justify-between items-center space-y-4 xl:space-y-0">
+
+        <div className="flex flex-wrap justify-center items-center space-x-2 md:space-x-4">
+          <button className="bg-orange-500 min-w-[90px] md:min-w-[130px] text-white text-sm md:text-base font-semibold p-2 md:p-3 rounded-full mb-2 md:mb-0">
             All
           </button>
-          <button className="border min-w-[90px] md:min-w-[130px] text-gray-800 text-[14px] md:text-[16px] font-semibold p-2 md:p-3 rounded-full">
+          <button className="border min-w-[90px] md:min-w-[130px] text-gray-800 text-sm md:text-base font-semibold p-2 md:p-3 rounded-full mb-2 md:mb-0">
             Sides
           </button>
-          <button className="border min-w-[90px] md:min-w-[130px] text-gray-800 text-[14px] md:text-[16px] font-semibold p-2 md:p-3 rounded-full">
+          <button className="border min-w-[90px] md:min-w-[130px] text-gray-800 text-sm md:text-base font-semibold p-2 md:p-3 rounded-full mb-2 md:mb-0">
             Veg Options
           </button>
-          <button className="border min-w-[90px] md:min-w-[130px] text-gray-800 text-[14px] md:text-[16px] font-semibold p-2 md:p-3 rounded-full">
+          <button className="border min-w-[90px] md:min-w-[130px] text-gray-800 text-sm md:text-base font-semibold p-2 md:p-3 rounded-full mb-2 md:mb-0">
             Non Veg Options
           </button>
         </div>
 
-        {/* Search Section */}
-        <div className="border w-full md:w-1/2 lg:w-1/3 rounded-full flex items-center px-2 mt-4 md:mt-0">
+        <div className="border w-full md:w-1/2 lg:w-1/3 rounded-full flex items-center p-2">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -74,6 +69,8 @@ export function MenuSection() {
               />
             </svg>
           </div>
+
+
           <input
             type="text"
             className="w-full focus:outline-none px-2 text-[14px] md:text-[16px]"
@@ -101,14 +98,14 @@ export function MenuSection() {
       </div>
 
       {/* Food Cards Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
+      <div className="grid justify-around items-center grid-cols-1 lg:grid-cols-2 md:grid-cols-2  xl:grid-cols-4 gap-4">
         {cardData.map((item, index) => (
-          <FoodCard
+          <div
             key={index}
-            image={item.image}
-            name={item.name}
-            price={item.price}
-          />
+            className="flex w-full justify-center xl:justify-between"
+          >
+            <FoodCard image={item.image} name={item.name} price={item.price} />
+          </div>
         ))}
       </div>
     </div>
