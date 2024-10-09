@@ -2,7 +2,7 @@ import chef from "../assets/reviewsection.png";
 
 export function ReviewSection() {
   return (
-    <div className="h-fit flex flex-col lg:flex-row lg:justify-around items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-10 p-4">
+    <div className="h-fit flex flex-col w-full lg:flex-row lg:justify-around items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-10 p-4">
       <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
         <img src={chef} alt="Chef" className="w-full max-w-lg lg:max-w-md" />
       </div>

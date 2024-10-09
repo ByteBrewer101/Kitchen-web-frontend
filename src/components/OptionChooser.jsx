@@ -1,14 +1,19 @@
-import { useState } from "react";
+
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { OptionChooserState, options } from "../store/states";
 
 /* eslint-disable react/prop-types */
 
-export function OptionChooser({ items }) {
-  const [selectedOption, setSelectedOption] = useState("All");
+export function OptionChooser() {
 
-  const options = ["All", "Sides", "Veg", "Non-Veg"];
+  const selectedOption = useRecoilValue(OptionChooserState)
+  const setSelectedOption = useSetRecoilState(OptionChooserState)
 
+ 
+
+  
   return (
-    <div className="flex flex-col space-y-2  md:flex-row justify-center items-center md:space-x-2 p-2">
+    <div className="flex flex-col space-y-2 md:space-y-0  md:flex-row justify-center items-center md:space-x-2 p-2">
       {options.map((option) => (
         <button
           key={option}

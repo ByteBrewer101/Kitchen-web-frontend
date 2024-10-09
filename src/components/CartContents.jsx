@@ -1,59 +1,60 @@
 /* eslint-disable react/prop-types */
 
+import { useState } from "react";
 import sabzi from "../assets/sabzi.png";
 const cardlabels = [
   {
     name: "kabab",
     price: 375,
-    type: "Non-Veg",
+    type: "non-veg",
     number: 2,
   },
   {
     name: "pizza",
     price: 490,
-    type: "Fast Food",
+    type: "veg",
     number: 3,
   },
   {
     name: "burger",
     price: 282,
-    type: "Fast Food",
+    type: "non-veg",
     number: 4,
   },
   {
     name: "french fries",
     price: 150,
-    type: "Side Dish",
+    type: "side",
     number: 5,
   },
   {
     name: "chicken wings",
     price: 395,
-    type: "Non-Veg",
+    type: "non-veg",
     number: 6,
   },
   {
     name: "ice cream cone",
     price: 282,
-    type: "Snack",
+    type: "side",
     number: 7,
   },
   {
     name: "apple pie",
     price: 410,
-    type: "Dessert",
+    type: "side",
     number: 8,
   },
   {
     name: "chocolate cake",
     price: 490,
-    type: "Dessert",
+    type: "side",
     number: 9,
   },
   {
     name: "churros ",
     price: 215,
-    type: "Snack",
+    type: "veg",
     number: 10,
   },
 ];
@@ -81,10 +82,31 @@ export function CartContents() {
   );
 }
 
-export function CartCards({ name, price, type, number }) {
+export function CartCards({ name, price, type }) {
+
+
+  //states
+  const [count,setCount]=useState(0)
+
+  function plusHandler (){
+    setCount(count+1)
+  }
+
+  function minusHandler(){
+    if(count>0)
+    {
+  setCount(count - 1);
+    }
+
+
+  
+  }
+
+
+
   return (
-    <div className="flex justify-around  items-center">
-      <div className="flex w-1/3">
+    <div className="flex justify-around flex-col space-y-4 md:space-y-0  md:flex-row items-center">
+      <div className="flex w-full justify-around md:w-1/3">
         <img src={sabzi} alt="" />
         <div className="p-4">
           <h1 className="text-lg font-bold">{name}</h1>
@@ -94,7 +116,7 @@ export function CartCards({ name, price, type, number }) {
       </div>
 
       <div className="flex justify-center w-1/3 space-x-4 items-center">
-        <button>
+        <button onClick={minusHandler}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="37"
@@ -117,8 +139,8 @@ export function CartCards({ name, price, type, number }) {
             />
           </svg>
         </button>
-        <h1>{number}</h1>
-        <button>
+        <h1>{count}</h1>
+        <button onClick={plusHandler}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="36"

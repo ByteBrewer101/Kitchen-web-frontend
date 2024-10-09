@@ -1,5 +1,6 @@
 import { FoodCard } from "./FoodCard";
 import paneer from "../assets/paneer.png";
+import { OptionChooser } from "./OptionChooser";
 
 const cardData = [
   {
@@ -22,7 +23,6 @@ const cardData = [
     name: "Palak Paneer",
     price: "13",
   },
- 
 ];
 
 export function MenuSection() {
@@ -36,20 +36,10 @@ export function MenuSection() {
       </h1>
 
       <div className="flex flex-col xl:flex-row xl:justify-between items-center space-y-4 xl:space-y-0">
-
         <div className="flex flex-wrap justify-center items-center space-x-2 md:space-x-4">
-          <button className="bg-orange-500 min-w-[90px] md:min-w-[130px] text-white text-sm md:text-base font-semibold p-2 md:p-3 rounded-full mb-2 md:mb-0">
-            All
-          </button>
-          <button className="border min-w-[90px] md:min-w-[130px] text-gray-800 text-sm md:text-base font-semibold p-2 md:p-3 rounded-full mb-2 md:mb-0">
-            Sides
-          </button>
-          <button className="border min-w-[90px] md:min-w-[130px] text-gray-800 text-sm md:text-base font-semibold p-2 md:p-3 rounded-full mb-2 md:mb-0">
-            Veg Options
-          </button>
-          <button className="border min-w-[90px] md:min-w-[130px] text-gray-800 text-sm md:text-base font-semibold p-2 md:p-3 rounded-full mb-2 md:mb-0">
-            Non Veg Options
-          </button>
+       
+
+          <OptionChooser/>
         </div>
 
         <div className="border w-full md:w-1/2 lg:w-1/3 rounded-full flex items-center p-2">
@@ -69,7 +59,6 @@ export function MenuSection() {
               />
             </svg>
           </div>
-
 
           <input
             type="text"
