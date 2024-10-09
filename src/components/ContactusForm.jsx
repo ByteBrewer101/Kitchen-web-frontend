@@ -32,12 +32,12 @@ export function ContactUsForm() {
         </div>
 
         <div className="flex flex-col justify-center items-start space-y-4 w-full md:w-1/2 px-8">
-          <h1 className="text-xl font-semibold">
+          <h1 className="text-lg">
             Mausis Delicacies B1234 Maple Street, Suite 201 Downtown District,
             Near Stanley Park Vancouver, BC V6G 1Z4 Canada
           </h1>
-          <h1 className="text-lg font-semibold">+91 236 258 8250</h1>
-          <h1 className="text-lg font-semibold">
+          <h1 className="text-lg ">+91 236 258 8250</h1>
+          <h1 className="text-lg ">
             contact@mausisdelicacies.com
           </h1>
           <div> <div className="flex space-x-4">

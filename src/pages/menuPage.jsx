@@ -7,57 +7,42 @@ import { ContactUsForm } from "../components/ContactusForm";
 import { Footer } from "../components/Footer";
 import { OptionChooser } from "../components/OptionChooser";
 
-
 const cardData = [
   {
-    image: paneer,
+    image: paneer, // Replace with actual image path
     name: "Butter Paneer",
     price: "10",
+    type: "veg",
   },
   {
-    image: paneer,
+    image: paneer, // Replace with actual image path
     name: "Paneer Tikka",
     price: "11",
+    type: "veg",
   },
   {
-    image: paneer,
-    name: "Shahi Paneer",
+    image: paneer, // Replace with actual image path
+    name: "Chicken Curry",
     price: "14",
+    type: "non-veg",
   },
   {
-    image: paneer,
-    name: "Palak Paneer",
-    price: "13",
+    image: paneer, // Replace with actual image path
+    name: "Fish Fry",
+    price: "15",
+    type: "non-veg",
   },
   {
-    image: paneer,
-    name: "Paneer Bhurji",
-    price: "9",
+    image: paneer, // Replace with actual image path
+    name: "Steamed Rice",
+    price: "5",
+    type: "side",
   },
   {
-    image: paneer,
-    name: "Butter Paneer",
-    price: "10",
-  },
-  {
-    image: paneer,
-    name: "Paneer Tikka",
-    price: "11",
-  },
-  {
-    image: paneer,
-    name: "Shahi Paneer",
-    price: "14",
-  },
-  {
-    image: paneer,
-    name: "Palak Paneer",
-    price: "13",
-  },
-  {
-    image: paneer,
-    name: "Paneer Bhurji",
-    price: "9",
+    image: paneer, // Replace with actual image path
+    name: "Steamed Rice",
+    price: "5",
+    type: "side",
   },
 ];
 
@@ -66,7 +51,13 @@ const cardData = [
 
 
 
+
 export function MenuPage(){
+
+
+
+
+
     return (
       <div>
         <TopBar />
@@ -78,25 +69,29 @@ export function MenuPage(){
           }
         />
 
-        <div className="mx-40 flex flex-col space-y-4">
-          <div className="flex items-center justify-center mt-20">
-            <OptionChooser />
+        <div className="mx-0 lg:mx-40 flex flex-col justify-center items-center space-y-10">
+          <div className="flex flex-col items-center justify-center mt-4 ">
+            <OptionChooser items={cardData} />
           </div>
 
-          <div className="grid grid-rows-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 p-10">
+          <div className="grid grid-rows-2 overflow-hidden  grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
             {cardData.map((item, index) => (
-              <FoodCard
-                key={index}
-                image={item.image}
-                name={item.name}
-                price={item.price}
-              />
+              <div key={index} className="flex ">
+                <FoodCard
+                  image={item.image}
+                  name={item.name}
+                  price={item.price}
+                  className="max-w-[200px] w-full" // Set a fixed width with a max-width
+                />
+              </div>
             ))}
           </div>
           <ReviewSection />
           <ContactUsForm />
         </div>
-        <Footer />
+        <div className="mt-40">
+          <Footer />
+        </div>
       </div>
     );
 }

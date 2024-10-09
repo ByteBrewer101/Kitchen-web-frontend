@@ -60,7 +60,7 @@ const cardlabels = [
 
 export function CartContents() {
   return (
-    <div className="flex flex-col space-y-4 h-[500px] overflow-y-scroll overflow-hidden">
+    <div className="flex flex-col space-y-4 h-[500px] overflow-y-scroll hide-scrollbar  overflow-hidden">
       <div className="flex justify-around  text-gray-800 font-semibold text-lg">
         <h1>Product</h1>
         <h1>Quantity</h1>

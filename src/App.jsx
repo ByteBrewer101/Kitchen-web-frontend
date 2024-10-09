@@ -1,6 +1,6 @@
-import { Homepage } from "./pages/Homepage"
+import { Homepage } from "./pages/homepage"
 import {BrowserRouter, Routes, Route} from "react-router-dom"
-import { MenuPage } from "./pages/menuPage";
+import { MenuPage } from "./pages/menupage";
 import { CartPage } from "./pages/cartpage";
 import { ContactUsPage } from "./pages/contactuspage";
 import { SignupPage } from "./pages/signup";

@@ -1,17 +1,17 @@
-import chef from "../assets/chef.png";
+import chef from "../assets/reviewsection.png";
 
 export function ReviewSection() {
   return (
     <div className="h-fit flex flex-col lg:flex-row lg:justify-around items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-10 p-4">
-      <div className="w-full lg:w-1/3 flex justify-center lg:justify-start">
-        <img src={chef} alt="Chef" className="w-full max-w-sm lg:max-w-md" />
+      <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+        <img src={chef} alt="Chef" className="w-full max-w-lg lg:max-w-md" />
       </div>
       <div className="flex flex-col justify-center space-y-4 lg:w-2/3 text-center lg:text-left">
         <h1 className="text-orange-500 font-semibold">WHAT THEY SAY</h1>
-        <h1 className="text-gray-800 text-3xl lg:text-5xl mb-4 font-extrabold">
+        <h1 className="text-gray-800 text-3xl lg:text-4xl mb-4 font-extrabold">
           What Our Customers Say About Us
         </h1>
-        <p className="text-gray-800 lg:w-[400px] mx-auto lg:mx-0 font-semibold text-lg">
+        <p className="text-gray-800 lg:w-[400px] mx-auto lg:mx-0  text-lg">
           “Mausis Delicacies is the best. Besides the many and delicious meals,
           the service is also very good, especially in the very fast delivery. I
           highly recommend Mausis Delicacies to you”.
